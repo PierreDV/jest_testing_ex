@@ -13,17 +13,17 @@ A instructional project building a comment form with React and Redux to practice
 ### React and Redux specific logic to test:
 
 #### Component Testing:
-Verify correct HTML elements are rendered.
-Verify correct data is rendered.
-Verify that the interface reacts correctly to specific user actions. 
+* Verify correct HTML elements are rendered.
+* Verify correct data is rendered.
+* Verify that the interface reacts correctly to specific user actions. 
 
 #### Reducer Testing:
-Properly handles specific actions.
-Handles unknown actions correctly. 
+* Properly handles specific actions.
+* Handles unknown actions correctly. 
 
 #### Redux Action testing:
-Return the proper action type.
-Return the correct payload
+* Return the proper action type.
+* Return the correct payload
 
 ## Available Scripts
 
