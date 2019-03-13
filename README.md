@@ -2,6 +2,29 @@
 
 A instructional project building a comment form with React and Redux to practice testing with Jest. 
 
+## Notes on Testing React/Redux Apps
+
+### Figuring Out What To Test
+
+1. Look at each individual part of your application.
+2. Imagine telling a friend “Here’s what this piece of code does”
+3. Write a test to verify that each part does what you expect.
+
+### React and Redux specific logic to test:
+
+#### Component Testing:
+Verify correct HTML elements are rendered.
+Verify correct data is rendered.
+Verify that the interface reacts correctly to specific user actions. 
+
+#### Reducer Testing:
+Properly handles specific actions.
+Handles unknown actions correctly. 
+
+#### Redux Action testing:
+Return the proper action type.
+Return the correct payload
+
 ## Available Scripts
 
 In the project directory, you can run:
