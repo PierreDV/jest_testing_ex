@@ -1,11 +1,20 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
+import Root from 'Root';
 import CommentBox from 'components/CommentBox';
 
 let wrapped;
 
 beforeEach(() => {
-  wrapped = shallow(<CommentBox />);
+  wrapped = mount(
+    <Root>
+      <CommentBox />
+    </Root>
+  );
+});
+
+afterEach(() => {
+  wrapped.unmount();
 });
 
 it('has a text area and a button', () => {
@@ -26,9 +35,7 @@ describe('the text area', () => {
   });
   
   it('empties the text area when form is submitted', () => {
-    wrapped.find('form').simulate('submit', {
-      preventDefault: () => {}
-    });
+    wrapped.find('form').simulate('submit');
     wrapped.update();
   
     expect(wrapped.find('textarea').prop('value')).toEqual('');
