@@ -7,7 +7,7 @@ export default () => {
   return(
     <div>
       <Route path="/post" component={CommentBox} />
-      <Route path="/" component={CommentList} />
+      <Route path="/" exact component={CommentList} />
     </div>
   );
 };
