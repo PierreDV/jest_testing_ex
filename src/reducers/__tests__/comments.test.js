@@ -6,8 +6,14 @@ it('handles actions of type SAVE_COMMENT', () => {
     type: SAVE_COMMENT,
     payload: 'New Comment'
   };
-  
   const newState = commentsReducer([], action);
 
   expect(newState).toEqual(['New Comment'])
+});
+
+// Arguably not a very useful test.
+it('handles action with unkown type', () =>{
+  const newState = commentsReducer([], {});
+
+  expect(newState).toEqual([]);
 });
